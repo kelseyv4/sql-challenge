@@ -23,7 +23,12 @@ INNER JOIN employees
 ON dept_manager.emp_no = employees.emp_no;
 
 -- List the department of each employee with the following information: employee number, last name, first name, and department name.
-
+SELECT employees.first_name AS "First Name",
+		employees.last_name AS "Last Name", 
+		employees.sex AS "Sex"
+FROM employees
+WHERE first_name = 'Hercules'
+	AND	last_name LIKE 'B%';
 
 -- List first name, last name, and sex for employees whose first name is "Hercules" and last names begin with "B."
 
